@@ -3601,7 +3601,12 @@ void CreateBoxMon(struct BoxPokemon *boxMon, u16 species, u8 level, u8 fixedIV, 
     #endif
     }
 
-    if (gSpeciesInfo[species].abilities[1])
+     if (gSpeciesInfo[species].abilities[2] && (Random() % 100) <= 25)
+    {
+        value = 2;
+        SetBoxMonData(boxMon, MON_DATA_ABILITY_NUM, &value);
+    }
+    else if (gSpeciesInfo[species].abilities[1])
     {
         value = personality & 1;
         SetBoxMonData(boxMon, MON_DATA_ABILITY_NUM, &value);
@@ -5502,11 +5507,16 @@ u16 GetAbilityBySpecies(u16 species, u8 abilityNum)
 {
     int i;
 
-    if (abilityNum < NUM_ABILITY_SLOTS)
+    /* if (abilityNum < NUM_ABILITY_SLOTS)
         gLastUsedAbility = gSpeciesInfo[species].abilities[abilityNum];
     else
         gLastUsedAbility = ABILITY_NONE;
+    */
 
+
+    if (abilityNum < NUM_ABILITY_SLOTS)
+        gLastUsedAbility = gSpeciesInfo[species].abilities[abilityNum];
+    
     if (abilityNum >= NUM_NORMAL_ABILITY_SLOTS) // if abilityNum is empty hidden ability, look for other hidden abilities
     {
         for (i = NUM_NORMAL_ABILITY_SLOTS; i < NUM_ABILITY_SLOTS && gLastUsedAbility == ABILITY_NONE; i++)
