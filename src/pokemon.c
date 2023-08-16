@@ -3544,7 +3544,7 @@ void CreateBoxMon(struct BoxPokemon *boxMon, u16 species, u8 level, u8 fixedIV, 
         iv = (value & (MAX_IV_MASK << 5)) >> 5;
         SetBoxMonData(boxMon, MON_DATA_SPATK_IV, &iv);
         iv = (value & (MAX_IV_MASK << 10)) >> 10;
-        SetBoxMonData(boxMon, MON_DATA_SPDEF_IV, &iv); */
+        SetBoxMonData(boxMon, MON_DATA_SPDEF_IV, &iv); */                       //give all wild pokemon MAX IV
 
 
             u32 iv = MAX_PER_STAT_IVS;
