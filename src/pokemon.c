@@ -7419,6 +7419,11 @@ u8 CanLearnTeachableMove(u16 species, u16 move)
     }
 }
 
+
+
+
+
+
 u8 GetMoveRelearnerMoves(struct Pokemon *mon, u16 *moves)
 {
     u16 learnedMoves[4];
