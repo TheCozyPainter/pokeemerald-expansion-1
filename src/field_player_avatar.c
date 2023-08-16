@@ -1842,7 +1842,7 @@ static bool8 Fishing_CheckForBite(struct Task *task)
         if (!bite)
         {
             if (Random() & 1)
-                task->tStep = FISHING_NO_BITE;
+                task->tStep = FISHING_ON_HOOK;
             else
                 bite = TRUE;
         }
