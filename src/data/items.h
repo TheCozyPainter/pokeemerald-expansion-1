@@ -31,7 +31,7 @@ const struct Item gItems[] =
     {
         .name = _("Poké Ball"),
         .itemId = ITEM_POKE_BALL,
-        .price = 200,
+        .price = 100,
         .description = sPokeBallDesc,
         .pocket = POCKET_POKE_BALLS,
         .type = ITEM_USE_BAG_MENU,
@@ -9266,7 +9266,7 @@ const struct Item gItems[] =
     {
         .name = _("Old Rod"),
         .itemId = ITEM_OLD_ROD,
-        .price = 0,
+        .price = 1000,
         .description = sOldRodDesc,
         .importance = 1,
         .registrability = TRUE,
